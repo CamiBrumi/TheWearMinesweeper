@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">The Minesweeper</string>
+    <string name="action_settings">Settings</string>
+    <string name="how_to_play">How to Play</string>
+    <string name="about_the_developer">About the Developer</string>
+    <string name="rate_the_game">Rate the Game</string>
+    <string name="purpose">The purpose of the game is to open all the cells of the board which do not contain a bomb. You lose if you set off a bomb cell. (Scroll down ↓) \n \n Every non-bomb cell you open will tell you the total number of bombs in the eight neighboring cells.</string>
+    <string name="zero_cell">If the non-bomb cell is a zero, all the cells that are around it and they contain a zero or a number will be revealed.</string>
+    <string name="flag">If you are sure that a cell contains a bomb, you can long-press on a cell to put a \'flag\' (mini smiley face ☻) on it as a reminder. If you change your mind, you can long tap the cell again and it will turn into ☺.</string>
+    <string name="swipe">You can also move through the board swiping up, down, right or left.</string>
+    <string name="game_over">If you click a bomb, the game will end and all the board elements will be revealed.</string>
+
+    <string name="quit">To quit the current game without finishing it, you have to long tap on the right side of the screen and then click \'Quit\'.</string>
+    <string name="hunt">\n Happy mine hunting!</string>
+    <string name="back_to_menu">Back to Menu</string>
+</resources>

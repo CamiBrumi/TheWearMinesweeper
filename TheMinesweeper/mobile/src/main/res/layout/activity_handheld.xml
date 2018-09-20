@@ -1,0 +1,245 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/button_material_dark"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".Handheld"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/the_minesweeper"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="#00BFA5"
+        android:textSize="40sp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/first_row"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/the_minesweeper"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="howToPlay"
+            android:text="@string/how_to_play"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="aboutDeveloper"
+            android:text="@string/about_the_developer"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_row"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/first_row"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="rateApp"
+            android:text="@string/rate_the_game"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/logo" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineA"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/scrollView"
+        android:background="#ffffff"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lineB"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="28dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_to_play"
+                    android:textAllCaps="true"
+                    android:textColor="#00BFA5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/purpose"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/range" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero_cell"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/zero" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/flag"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/on_long_tap" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/swipe"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/move" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/game_over"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/reveal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quit"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/to_quit" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/quit" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hunt"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aboutDeveloper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_the_developer"
+                    android:textAllCaps="true"
+                    android:textColor="#00BFA5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:text="Hey there! My name's Camelia and I'm an ordinary High School student.
+                                    This game is the object of my final year investigation project.
+                                    I was learning Java and Android programming during whole summer holiday.
+                                    My purpose was to create an attractive and challenging  Minesweeper, so I did the best to accomplish with my goals.
+                                    I'm looking forward to hear your advices about what I should modify in both game's design and structure to offer you the best experience, so reviews on Google Play™ store app are also welcomed. :)
+                                    I strongly hope you enjoy my application." />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/lineB"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/backToMenuB"
+        android:background="#ffffff"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/backToMenuB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="backToMenu"
+        android:text="@string/back_to_menu"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+
+</LinearLayout>

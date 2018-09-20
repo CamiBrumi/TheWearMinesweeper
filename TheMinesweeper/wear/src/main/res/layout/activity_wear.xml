@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#000000"
+    android:padding="15dp"
+    android:layout_marginTop="5dp"
+    tools:context=".Wear"
+    tools:deviceIds="wear">
+
+    <LinearLayout
+        android:id="@+id/main_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/lineOne"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#00BFA5" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/how_many_mines"
+            android:textSize="15sp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+
+            <Button
+                android:id="@+id/decrementButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:onClick="decrement"
+                android:text="@string/minus"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/minesNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/number_of_mines"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/incrementButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:onClick="increment"
+                android:text="@string/plus"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:onClick="play"
+            android:text="@string/play"
+            android:textAllCaps="true"
+            android:textSize="15sp"
+            android:layout_weight="1.5"/>
+
+        <View
+            android:id="@+id/lineTwo"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#00BFA5" />
+
+        <LinearLayout
+            android:id="@+id/helpAndExitB"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <Button
+                android:id="@+id/helpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:onClick="help"
+                android:text="@string/need_help"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/exitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:onClick="finishActivity"
+                android:text="@string/exit_game"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/instructions_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="66dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_to_play"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/purpose" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/range" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero_cell" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/zero" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/flag" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/on_long_tap" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/swipe" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/move" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/game_over" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/reveal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quit" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/to_quit" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/quit" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hunt" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:id="@+id/lineThree"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/backToMenuButton"
+            android:layout_marginTop="5dp"
+            android:background="#00BFA5" />
+
+        <Button
+            android:id="@+id/backToMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:onClick="backToMenu"
+            android:text="@string/back_to_menu"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

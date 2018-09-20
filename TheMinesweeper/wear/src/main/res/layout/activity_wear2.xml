@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center"
+    tools:context="yukamiapps.theminesweeper.Wear2"
+    tools:deviceIds="wear">
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="22dp"
+        android:numColumns="4" />
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99212121"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/finalMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#99212121"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#99212121"
+            android:gravity="center"
+            android:text="@string/your_time"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#99212121"
+            android:gravity="center"
+            android:paddingBottom="10dp" />
+
+        <Button
+            android:id="@+id/resumeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="resume"
+            android:text="@string/resume"
+            android:textAllCaps="false"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/goToMainMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="finishActivity"
+            android:text="@string/main_menu"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</RelativeLayout>
